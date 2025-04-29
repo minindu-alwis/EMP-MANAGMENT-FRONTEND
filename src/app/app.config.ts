@@ -11,10 +11,10 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(
-      withInterceptorsFromDi() // For class-based interceptors
+      withInterceptorsFromDi() 
     ),
     provideAnimations(),
     MessageService,
-    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true } // Class-based interceptor registration
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true } 
   ]
 };
